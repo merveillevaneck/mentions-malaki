@@ -7,7 +7,7 @@ import { createTRPCContext } from "~/server/api/trpc";
 
 const handler = (req: NextRequest) =>
   fetchRequestHandler({
-    endpoint: (process.env.VERCEL_URL ?? "http://localhost:3000") + "/api/trpc",
+    endpoint: "/api/trpc",
     req,
     router: appRouter,
     createContext: () => createTRPCContext({ req }),
