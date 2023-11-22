@@ -6,7 +6,7 @@ const parseEmojis = (message: string) => {
   const matches = message.match(regex)
   console.log('matches', matches)
   if (!matches) return message
-  let parsedMessage = message
+  let parsedMessage: string = message
   matches.forEach((match) => {
     const emoji = emojiData.find((emoji) => (':' + emoji.id + ':') === match)
     if (emoji) {

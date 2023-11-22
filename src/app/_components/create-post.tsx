@@ -90,7 +90,7 @@ export function CreatePost() {
     [data],
   );
 
-  const emojis = api.post.getEmojiData.useQuery();
+  // const emojis = api.post.getEmojiData.useQuery();
 
   const queryEmojis = (query: string) => {
     if (query.length === 0) return emojiData2.slice(0, 10);
