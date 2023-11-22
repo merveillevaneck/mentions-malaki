@@ -34,7 +34,7 @@ async function CrudShowcase() {
     <div className="w-full max-w-xl">
       <div className="flex w-full flex-col-reverse gap-2">
         {latestPost.length > 0 ? (
-          latestPost.map((p) => <Post message={p.name ?? ""} />)
+          latestPost.map((p) => <Post key={p.id} message={p.name ?? ""} />)
         ) : (
           <p>You have no posts yet.</p>
         )}
